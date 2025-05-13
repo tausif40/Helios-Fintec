@@ -88,6 +88,7 @@ export default function Login() {
 									id="password"
 									type={showPassword ? "text" : "password"}
 									className="pl-10"
+									placeholder="password"
 									required
 									value={password}
 									onChange={(e) => { setPassword(e.target.value); setError(''); }}

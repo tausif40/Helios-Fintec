@@ -25,11 +25,11 @@ export default function Home() {
 										Get Started <ArrowRight className="ml-2 h-4 w-4" />
 									</Button>
 								</Link>
-								<Link href="/dashboard/demo">
+								{/* <Link href="/dashboard/demo">
 									<Button size="lg" variant="outline">
 										View Demo
 									</Button>
-								</Link>
+								</Link> */}
 							</div>
 						</div>
 						<div className="mx-auto lg:mx-0 relative">
