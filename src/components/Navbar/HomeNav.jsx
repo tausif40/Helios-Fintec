@@ -29,7 +29,7 @@ function HomeNav() {
 					</Link>
 				</div>
 				<div className="flex items-center gap-4">
-					<Link href="/login">
+					<Link href="/auth/login">
 						<Button variant="outline">Login</Button>
 					</Link>
 					<Link href="/register" className="hidden md:block">
