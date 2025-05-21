@@ -93,7 +93,7 @@ export default function Register() {
 	}
 
 	return (
-		<div className="flex min-h-screen items-center justify-center bg-gradient-to-r from-purple-50 to-blue-50 p-4 pt-4">
+		<div className="flex min-h-screen items-center justify-center bg-gradient-to-r from-purple-50 to-blue-50 p-4 mt-4">
 			<Card className="w-full max-w-xl shadow-lg">
 				<CardHeader className="space-y-1">
 					<CardTitle className="text-2xl font-bold text-center">Create an account</CardTitle>
@@ -272,7 +272,7 @@ export default function Register() {
 						</Button>
 						<div className="text-center text-sm">
 							Already have an account?{" "}
-							<Link href="/login" className="text-purple-600 hover:underline">
+							<Link href="/auth/login" className="text-purple-600 hover:underline">
 								Sign in
 							</Link>
 						</div>
