@@ -10,6 +10,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Progress } from "@/components/ui/progress"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CandleStickChart } from "@/components/chart/candle-stick-chart"
+import Image from "next/image"
 
 export default function Dashboard() {
 	const [ timeRange, setTimeRange ] = useState("1M")
@@ -23,12 +24,12 @@ export default function Dashboard() {
 					<p className="text-muted-foreground">Welcome back, John! Here's an overview of your finances.</p>
 				</div>
 				<div className="flex items-center gap-2">
-					<Button variant="outline" size="sm">
+					{/* <Button variant="outline" size="sm">
 						<Download className="mr-2 h-4 w-4" />
 						Download Report
-					</Button>
+					</Button> */}
 					<Button
-						size="sm"
+						size="lg"
 						className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600"
 					>
 						<DollarSign className="mr-2 h-4 w-4" />
@@ -37,8 +38,61 @@ export default function Dashboard() {
 				</div>
 			</div>
 
+			{/* Mutual Funds Card */}
+			<Card className="overflow-hidden py-0">
+				<CardContent className="p-0">
+					<div className="flex flex-col md:flex-row">
+						<div className="relative bg-blue-100 md:w-1/3">
+							<div className="relative h-full">
+								<Image
+									src="/placeholder.svg"
+									alt="Mutual Funds"
+									fill
+									className="object-cover w-full h-auto opacity-50"
+								/>
+								<h3 className="z-10 absolute top-2 right-6 text-4xl font-bold text-blue-600"> Mutual Funds</h3>
+							</div>
+							<div className="hidden md:block">
+								<ChevronRight className="h-6 w-6 text-blue-500" />
+							</div>
+						</div>
+						<div className="p-6 md:w-2/3">
+							<div className="grid grid-cols-2 gap-4 mb-4">
+								<div>
+									<p className="text-gray-500">Invested value</p>
+									<p className="text-xl font-bold">₹0</p>
+								</div>
+								<div>
+									<p className="text-gray-500">Current value</p>
+									<p className="text-xl font-bold">₹0</p>
+								</div>
+							</div>
+							<div className="bg-gray-100 p-3 rounded-md mb-4">
+								<div className="flex justify-between">
+									<p className="text-gray-500">Gains</p>
+									<p className="font-bold">₹0</p>
+								</div>
+							</div>
+							<div className="space-y-2 mb-4">
+								<div className="flex justify-between">
+									<p className="text-gray-500">Today's change</p>
+									<p className="font-bold">₹0(0%)</p>
+								</div>
+								<div className="flex justify-between">
+									<p className="text-gray-500">Annualized return</p>
+									<p className="font-bold">N/A</p>
+								</div>
+							</div>
+							<Link href="/dashboard/mutual-fund/sip">
+								<Button className="w-full bg-blue-600 hover:bg-blue-700">INVEST</Button>
+							</Link>
+						</div>
+					</div>
+				</CardContent>
+			</Card>
+
 			{/* Overview Cards */}
-			<div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+			{/* <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
 				<Card className="bg-gradient-to-br from-purple-50 to-white border-purple-100">
 					<CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
 						<CardTitle className="text-sm font-medium">Total Assets</CardTitle>
@@ -91,10 +145,10 @@ export default function Dashboard() {
 						</div>
 					</CardContent>
 				</Card>
-			</div>
+			</div> */}
 
 			{/* Candle Stick Chart */}
-			<Card className="overflow-hidden">
+			{/* <Card className="overflow-hidden">
 				<CardHeader className="pb-2">
 					<div className="flex items-center justify-between">
 						<div>
@@ -143,10 +197,10 @@ export default function Dashboard() {
 						<CandleStickChart timeRange={timeRange} trend={stockTrend} />
 					</div>
 				</CardContent>
-			</Card>
+			</Card> */}
 
 			{/* Financial Categories */}
-			<Tabs defaultValue="investments" className="space-y-4">
+			<Tabs defaultValue="investments" className="space-y-4 mt-12">
 				<TabsList className="grid grid-cols-4 md:w-[400px]">
 					<TabsTrigger value="investments">Investments</TabsTrigger>
 					<TabsTrigger value="loans">Loans</TabsTrigger>

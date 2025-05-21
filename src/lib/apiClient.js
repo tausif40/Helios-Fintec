@@ -21,16 +21,16 @@ apiClient.interceptors.request.use((config) => {
 });
 
 // apiClient.interceptors.response.use(
-// 	(response) => {
-// 		return response;
-// 	},
-// 	(error) => {
-// 		console.log("apiClient error - ", error);
-// 		// if (error?.response?.status === 401) {
-// 		// window.location.href = "/auth/signup";
-// 		// }
-// 		return Promise.reject(error?.response?.data);
-// 	},
+//   (response) => {
+//     return response;
+//   },
+//   (error) => {
+//     console.log("apiClient error - ", error);
+//     if (error?.response?.status === 401) {
+//       window.location.href = "/auth/login";
+//     }
+//     return Promise.reject(error?.response?.data);
+//   },
 // );
 
 export default apiClient;

@@ -16,12 +16,12 @@ export default function InsurancePage() {
           <p className="text-muted-foreground">Manage your insurance policies and track coverage.</p>
         </div>
         <div className="flex items-center gap-2">
-          <Button variant="outline" size="sm">
+          {/* <Button variant="outline" size="sm">
             <Download className="mr-2 h-4 w-4" />
             Export
-          </Button>
+          </Button> */}
           <Button
-            size="sm"
+            size="lg"
             className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600"
           >
             <Plus className="mr-2 h-4 w-4" />

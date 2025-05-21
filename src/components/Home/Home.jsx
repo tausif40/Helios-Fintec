@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle2, Download, BarChart3, Shield, CreditCard, Wallet } from "lucide-react"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import Image from "next/image";
 
 export default function Home() {
 
@@ -209,11 +210,11 @@ export default function Home() {
 			</section> */}
 
 			{/* Hero Section */}
-			<section className="h-[90vh] w-full flex items-center bg-gradient-to-r from-purple-50 to-blue-50">
+			<section className="min-h-[90vh] pt-8 pb-12 sm:pb-20 md:pb-20 w-full flex items-center bg-gradient-to-r from-purple-50 to-blue-50">
 				<div className="container px-4 md:px-6">
-					<div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+					<div className="grid gap-14 md:gap-20 lg:grid-cols-2 lg:gap-12 items-center">
 						<div className="">
-							<h1 className="text-3xl font-bold sm:text-5xl md:text-6xl space-y-1 leading-tight">
+							<h1 className="text-4xl font-bold sm:text-5xl md:text-6xl space-y-1 leading-tight">
 								<span className="block bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text  text-transparent">
 									One Platform
 								</span>
@@ -225,12 +226,11 @@ export default function Home() {
 								</span>
 							</h1>
 
-
 							<p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mt-2 mb-6">
 								Invest, insure, and grow your wealth — smarter, faster, and safer.
 							</p>
 
-							<div className="flex flex-col gap-2 min-[400px]:flex-row">
+							<div className="flex flex-col gap-2 min-[400px]:flex-row flex-wrap">
 								<Button
 									size="lg"
 									className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600"
@@ -252,7 +252,7 @@ export default function Home() {
 							<div className="absolute -bottom-8 -left-20 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-4000"></div>
 							<div className="relative shadow-2xl rounded-2xl overflow-hidden border border-gray-200">
 								<img
-									src="/placeholder.svg?height=400&width=600"
+									src="/placeholder.svg"
 									alt="Dashboard Preview"
 									className="w-full h-[400px] object-cover rounded-2xl bg-transparent opacity-30"
 								/>
@@ -361,47 +361,45 @@ export default function Home() {
 					</div>
 
 					{/* Testimonials */}
-					<div className="relative">
-						<div className="flex justify-center space-x-6 animate-scroll">
-							<div className="bg-white p-6 rounded-xl shadow-sm min-w-[300px] max-w-sm">
-								<div className="flex items-center mb-4">
-									<div className="w-10 h-10 rounded-full bg-purple-100 mr-3"></div>
-									<div>
-										<div className="font-medium">Rahul Sharma</div>
-										<div className="text-sm text-gray-500">Investor since 2020</div>
-									</div>
+					<div className="flex justify-center gap-6 animate-scroll flex-wrap">
+						<div className="bg-white p-6 rounded-xl shadow-sm w-full md:w-[350px]">
+							<div className="flex items-center mb-4">
+								<div className="w-10 h-10 rounded-full bg-purple-100 mr-3"></div>
+								<div>
+									<div className="font-medium">Rahul Sharma</div>
+									<div className="text-sm text-gray-500">Investor since 2020</div>
 								</div>
-								<p className="text-gray-600 text-sm">
-									"MetroFintech has transformed how I manage my investments. The platform is intuitive and the advisory
-									services are top-notch."
-								</p>
 							</div>
-							<div className="bg-white p-6 rounded-xl shadow-sm min-w-[300px] max-w-sm">
-								<div className="flex items-center mb-4">
-									<div className="w-10 h-10 rounded-full bg-blue-100 mr-3"></div>
-									<div>
-										<div className="font-medium">Priya Patel</div>
-										<div className="text-sm text-gray-500">Home Loan Customer</div>
-									</div>
+							<p className="text-gray-600 text-sm">
+								"MetroFintech has transformed how I manage my investments. The platform is intuitive and the advisory
+								services are top-notch."
+							</p>
+						</div>
+						<div className="bg-white p-6 rounded-xl shadow-sm w-full md:w-[350px]">
+							<div className="flex items-center mb-4">
+								<div className="w-10 h-10 rounded-full bg-blue-100 mr-3"></div>
+								<div>
+									<div className="font-medium">Priya Patel</div>
+									<div className="text-sm text-gray-500">Home Loan Customer</div>
 								</div>
-								<p className="text-gray-600 text-sm">
-									"Getting a home loan through MetroFintech was surprisingly easy. The rates were competitive and the
-									process was smooth."
-								</p>
 							</div>
-							<div className="bg-white p-6 rounded-xl shadow-sm min-w-[300px] max-w-sm">
-								<div className="flex items-center mb-4">
-									<div className="w-10 h-10 rounded-full bg-green-100 mr-3"></div>
-									<div>
-										<div className="font-medium">Amit Verma</div>
-										<div className="text-sm text-gray-500">Insurance Customer</div>
-									</div>
+							<p className="text-gray-600 text-sm">
+								"Getting a home loan through MetroFintech was surprisingly easy. The rates were competitive and the
+								process was smooth."
+							</p>
+						</div>
+						<div className="bg-white p-6 rounded-xl shadow-sm w-full md:w-[350px]">
+							<div className="flex items-center mb-4">
+								<div className="w-10 h-10 rounded-full bg-green-100 mr-3"></div>
+								<div>
+									<div className="font-medium">Amit Verma</div>
+									<div className="text-sm text-gray-500">Insurance Customer</div>
 								</div>
-								<p className="text-gray-600 text-sm">
-									"The insurance options at MetroFintech are comprehensive and affordable. Their team helped me find the
-									perfect plan for my family."
-								</p>
 							</div>
+							<p className="text-gray-600 text-sm">
+								"The insurance options at MetroFintech are comprehensive and affordable. Their team helped me find the
+								perfect plan for my family."
+							</p>
 						</div>
 					</div>
 				</div>
@@ -448,25 +446,39 @@ export default function Home() {
 			{/* App Promotion */}
 			<section className="w-full py-12 md:py-24 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
 				<div className="container px-4 md:px-6">
-					<div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center justify-items-end">
+					<div className="grid lg:grid-cols-2 gap-12 items-center lg:justify-items-end">
 						<div className="space-y-4">
 							<h2 className="text-3xl font-bold md:text-4xl/tight">Get MetroFintech on the go!</h2>
 							<p className="max-w-[600px] text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
 								Manage your finances anytime, anywhere with our mobile app. Track investments, pay EMIs, and more.
 							</p>
-							<div className="flex flex-col sm:flex-row gap-3">
-								<Button className="bg-black hover:bg-gray-900 text-white">
-									<Download className="mr-2 h-4 w-4" />
-									Google Play
-								</Button>
-								<Button className="bg-black hover:bg-gray-900 text-white">
-									<Download className="mr-2 h-4 w-4" />
-									App Store
-								</Button>
+							<div className="flex gap-4 mt-6">
+								<button className="flex items-center gap-3 bg-gray-900 text-white px-3 py-2 rounded-md shadow transition hover:bg-gray-800 cursor-pointer">
+									<img
+										src="/img/icon/play-store.png"
+										alt="google"
+										className="object-cover h-[28px]"
+									/>
+									<div className="text-left">
+										<div className="text-xs leading-none font-light">Get it on</div>
+										<div className="font-semibold text-sm">Google Play</div>
+									</div>
+								</button>
+								<button className="flex items-center gap-3 bg-gray-900 text-white px-3 py-2 rounded-md shadow transition hover:bg-gray-800 cursor-pointer">
+									<img
+										src="/img/icon/apple.png"
+										alt="apple"
+										className="object-cover h-[28px]"
+									/>
+									<div className="text-left">
+										<div className="text-xs leading-none font-light">Download on the</div>
+										<div className="font-semibold text-sm">App Store</div>
+									</div>
+								</button>
 							</div>
 						</div>
 						<div className="mx-auto float-end lg:mx-0 relative">
-							<div className="w-[360px] h-[500px] relative shadow-2xl rounded-2xl overflow-hidden border border-white/20">
+							<div className="w-full sm:w-[360px] h-[500px] relative shadow-2xl rounded-2xl overflow-hidden border border-white/20">
 								<img
 									src="/placeholder.svg?height=600&width=300"
 									alt="Mobile App Preview"

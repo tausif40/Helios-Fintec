@@ -4,7 +4,7 @@ import React from "react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Bell, CreditCard, HelpCircle, LayoutDashboard, LogOut, Menu, PieChart, Settings, Shield, User, Wallet, X, } from "lucide-react"
+import { Bell, CreditCard, HelpCircle, LayoutDashboard, LogOut, Menu, PieChart, Settings, Shield, User, Wallet, X, ChartCandlestick } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -20,6 +20,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 const navigation = [
 	{ name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
+	{ name: "Mutual Fund", href: "/dashboard/mutual-fund", icon: ChartCandlestick },
 	{ name: "Investments", href: "/dashboard/investments", icon: PieChart },
 	{ name: "Loans", href: "/dashboard/loans", icon: Wallet },
 	{ name: "Insurance", href: "/dashboard/insurance", icon: Shield },
@@ -211,9 +212,10 @@ export default function DashboardLayout({ children }) {
 				{/* Main Content */}
 				<main className="flex-1 overflow-auto">
 					{/* Page Content */}
-					<div className="p-4 md:p-6 lg:p-8">{children}</div>
+					<div className="p-4 md:px-8 md:py-8 lg:px-12 lg:py-8 xl:px-16 xl:py-8">{children}</div>
 				</main>
 			</div>
+
 		</div>
 	)
 }

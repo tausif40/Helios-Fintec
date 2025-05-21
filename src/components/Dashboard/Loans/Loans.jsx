@@ -21,12 +21,12 @@ export default function Loans() {
 					<p className="text-muted-foreground">Manage all your loans and track your EMIs in one place.</p>
 				</div>
 				<div className="flex items-center gap-2">
-					<Button variant="outline" size="sm">
+					{/* <Button variant="outline">
 						<FileText className="mr-2 h-4 w-4" />
 						Loan Statement
-					</Button>
+					</Button> */}
 					<Button
-						size="sm"
+						size="lg"
 						className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600"
 					>
 						<Plus className="mr-2 h-4 w-4" />
